@@ -58,14 +58,14 @@ export const Footer: React.FC = () => {
           <div>
             <div className="editorial-label">Collections</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1rem', fontSize: '0.9rem' }}>
-              <Link to="/collections?cat=kurtas" style={{ color: 'var(--text-secondary)' }}>Kurtas & Kurtis</Link>
-              <Link to="/collections?cat=stitched-suits" style={{ color: 'var(--text-secondary)' }}>Stitched Suits</Link>
-              <Link to="/collections?cat=unstitched-suits" style={{ color: 'var(--text-secondary)' }}>Unstitched Suits</Link>
-              <Link to="/collections?cat=partywear" style={{ color: 'var(--text-secondary)' }}>Partywear</Link>
-              <Link to="/collections?cat=formal-wear" style={{ color: 'var(--text-secondary)' }}>Formal & Office Wear</Link>
-              <Link to="/collections?cat=bridal-wear" style={{ color: 'var(--gold-primary)' }}>Bridal Edit</Link>
-              <Link to="/collections?cat=jewellery" style={{ color: 'var(--text-secondary)' }}>Artificial Jewellery</Link>
-              <Link to="/collections?cat=bangles" style={{ color: 'var(--text-secondary)' }}>Bangles & Accessories</Link>
+              <Link to="/kurtas" style={{ color: 'var(--text-secondary)' }}>Kurtas & Kurtis</Link>
+              <Link to="/stitched-suits" style={{ color: 'var(--text-secondary)' }}>Stitched Suits</Link>
+              <Link to="/unstitched-suits" style={{ color: 'var(--text-secondary)' }}>Unstitched Suits</Link>
+              <Link to="/partywear" style={{ color: 'var(--text-secondary)' }}>Partywear</Link>
+              <Link to="/formal-wear" style={{ color: 'var(--text-secondary)' }}>Formal & Office Wear</Link>
+              <Link to="/bridal-wear" style={{ color: 'var(--gold-primary)' }}>Bridal Edit</Link>
+              <Link to="/jewellery" style={{ color: 'var(--text-secondary)' }}>Artificial Jewellery</Link>
+              <Link to="/bangles" style={{ color: 'var(--text-secondary)' }}>Bangles & Accessories</Link>
             </div>
           </div>
 
@@ -74,9 +74,9 @@ export const Footer: React.FC = () => {
             <div className="editorial-label">Explore</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1rem', fontSize: '0.9rem' }}>
               <Link to="/about" style={{ color: 'var(--text-secondary)' }}>About Akanksha's</Link>
-              <Link to="/regional/punjabi" style={{ color: 'var(--text-secondary)' }}>Punjabi Regional Edit</Link>
-              <Link to="/regional/rajasthani" style={{ color: 'var(--text-secondary)' }}>Rajasthani Regional Edit</Link>
-              <Link to="/regional/himachali" style={{ color: 'var(--text-secondary)' }}>Himachali Regional Edit</Link>
+              <Link to="/punjabi-wear" style={{ color: 'var(--text-secondary)' }}>Punjabi Regional Edit</Link>
+              <Link to="/rajasthani-wear" style={{ color: 'var(--text-secondary)' }}>Rajasthani Regional Edit</Link>
+              <Link to="/himachali-wear" style={{ color: 'var(--text-secondary)' }}>Himachali Regional Edit</Link>
               <Link to="/gallery" style={{ color: 'var(--text-secondary)' }}>Store Gallery</Link>
               <Link to="/journal" style={{ color: 'var(--text-secondary)' }}>Fashion Journal</Link>
               <Link to="/visit-us" style={{ color: 'var(--gold-primary)' }}>Visit Our Store</Link>

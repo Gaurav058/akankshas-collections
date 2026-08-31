@@ -151,12 +151,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
                 animation: 'fadeIn 0.2s ease'
               }}>
                 <div className="editorial-label">Women's Edit</div>
-                <Link to="/collections?cat=kurtas" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Kurtas & Kurtis</Link>
-                <Link to="/collections?cat=stitched-suits" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Stitched Suits</Link>
-                <Link to="/collections?cat=unstitched-suits" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Unstitched Suits</Link>
-                <Link to="/collections?cat=partywear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Partywear</Link>
-                <Link to="/collections?cat=formal-wear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Formal & Office Wear</Link>
-                <Link to="/collections?cat=bridal-wear" style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', fontWeight: 600 }}>Bridal Wear</Link>
+                <Link to="/women" style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', fontWeight: 600 }}>All Women's Apparel</Link>
+                <Link to="/kurtas" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Kurtas & Kurtis</Link>
+                <Link to="/stitched-suits" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Stitched Suits</Link>
+                <Link to="/unstitched-suits" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Unstitched Suits</Link>
+                <Link to="/partywear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Partywear & Gowns</Link>
+                <Link to="/formal-wear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Formal & Office Wear</Link>
+                <Link to="/bridal-wear" style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', fontWeight: 600 }}>Bridal Wear</Link>
               </div>
             )}
           </div>
@@ -186,9 +187,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
                 zIndex: 110
               }}>
                 <div className="editorial-label">India's Regional Grace</div>
-                <Link to="/regional/punjabi" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Punjabi Edit</Link>
-                <Link to="/regional/rajasthani" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Rajasthani Edit</Link>
-                <Link to="/regional/himachali" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Himachali Edit</Link>
+                <Link to="/punjabi-wear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Punjabi Edit</Link>
+                <Link to="/rajasthani-wear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Rajasthani Edit</Link>
+                <Link to="/himachali-wear" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Himachali Edit</Link>
               </div>
             )}
           </div>
@@ -218,10 +219,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
                 zIndex: 110
               }}>
                 <div className="editorial-label">Accessories & Jewels</div>
-                <Link to="/collections?cat=jewellery" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Chokers & Necklaces</Link>
-                <Link to="/collections?cat=jewellery" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Earrings & Jhumkas</Link>
-                <Link to="/collections?cat=bangles" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Bangles & Kadas</Link>
-                <Link to="/collections?cat=jewellery" style={{ color: 'var(--gold-primary)', fontSize: '0.9rem' }}>Bridal Jewellery Sets</Link>
+                <Link to="/jewellery" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Chokers & Necklaces</Link>
+                <Link to="/jewellery" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Earrings & Jhumkas</Link>
+                <Link to="/bangles" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Bangles & Kadas</Link>
+                <Link to="/jewellery" style={{ color: 'var(--gold-primary)', fontSize: '0.9rem', fontWeight: 600 }}>Bridal Jewellery Sets</Link>
               </div>
             )}
           </div>
@@ -308,11 +309,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
       {/* FULL-SCREEN MOBILE EDITORIAL DRAWER */}
       {mobileMenuOpen && (
         <div style={{
-          position: 'fixed',
-          top: '80px',
+          position: 'absolute',
+          top: '100%',
           left: 0,
           right: 0,
-          bottom: 0,
+          height: 'calc(100vh - 70px)',
           backgroundColor: '#0D0D0D',
           zIndex: 999,
           padding: '2rem 1.5rem',
@@ -321,38 +322,41 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
           flexDirection: 'column',
           justifyContent: 'space-between',
           borderTop: '1px solid var(--border-gold)',
-          animation: 'fadeIn 0.3s ease'
+          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.95)',
+          animation: 'fadeIn 0.25s ease'
         }}>
           <div>
             <div className="editorial-label">Navigation Menu</div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.25rem', marginTop: '1rem' }}>
-              <Link to="/" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Home</Link>
-              <Link to="/collections" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>All Collections</Link>
-              <Link to="/collections?cat=kurtas" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>Kurtas & Kurtis</Link>
-              <Link to="/collections?cat=stitched-suits" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>Stitched Suits</Link>
-              <Link to="/collections?cat=unstitched-suits" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>Unstitched Suits</Link>
-              <Link to="/collections?cat=partywear" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>Partywear & Formal</Link>
-              <Link to="/collections?cat=jewellery" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', paddingLeft: '1rem' }}>Artificial Jewellery</Link>
-              <Link to="/regional/punjabi" style={{ fontSize: '1.1rem', color: 'var(--gold-primary)', paddingLeft: '1rem' }}>Punjabi Regional Edit</Link>
-              <Link to="/regional/rajasthani" style={{ fontSize: '1.1rem', color: 'var(--gold-primary)', paddingLeft: '1rem' }}>Rajasthani Regional Edit</Link>
-              <Link to="/regional/himachali" style={{ fontSize: '1.1rem', color: 'var(--gold-primary)', paddingLeft: '1rem' }}>Himachali Regional Edit</Link>
-              <Link to="/gallery" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Gallery</Link>
-              <Link to="/about" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>About Boutique</Link>
-              <Link to="/visit-us" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)' }}>Visit Our Store</Link>
-              <Link to="/contact" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Contact Us</Link>
-              <Link to="/journal" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Journal & Blog</Link>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.1rem', marginTop: '1rem' }}>
+              <Link to="/" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Home</Link>
+              <Link to="/women" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)' }}>Women's Apparel</Link>
+              <Link to="/kurtas" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Kurtas & Kurtis</Link>
+              <Link to="/stitched-suits" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Stitched Suits</Link>
+              <Link to="/unstitched-suits" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Unstitched Suits</Link>
+              <Link to="/partywear" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Partywear & Gowns</Link>
+              <Link to="/bridal-wear" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--gold-primary)', paddingLeft: '0.75rem' }}>Bridal Edit</Link>
+              <Link to="/jewellery" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Artificial Jewellery</Link>
+              <Link to="/bangles" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--text-secondary)', paddingLeft: '0.75rem' }}>Bangles & Kadas</Link>
+              <Link to="/punjabi-wear" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--gold-primary)', paddingLeft: '0.75rem' }}>Punjabi Regional Edit</Link>
+              <Link to="/rajasthani-wear" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--gold-primary)', paddingLeft: '0.75rem' }}>Rajasthani Regional Edit</Link>
+              <Link to="/himachali-wear" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', color: 'var(--gold-primary)', paddingLeft: '0.75rem' }}>Himachali Regional Edit</Link>
+              <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Gallery</Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>About Boutique</Link>
+              <Link to="/visit-us" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--gold-primary)' }}>Visit Our Store</Link>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Contact Us</Link>
+              <Link to="/journal" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1.4rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>Journal & Blog</Link>
             </div>
           </div>
 
-          <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-subtle)' }}>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
+          <div style={{ marginTop: '2rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)' }}>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
               Shop No. 101, Satya Complex, Near Nadaun Chowk, Hamirpur, HP – 177001
             </p>
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href={`tel:${storeConfig.contact.phone}`} className="btn-outline-gold" style={{ flex: 1, padding: '0.75rem', fontSize: '0.8rem' }}>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <a href={`tel:${storeConfig.contact.phone}`} className="btn-outline-gold" style={{ flex: 1, padding: '0.6rem', fontSize: '0.75rem', justifyContent: 'center' }}>
                 <Phone size={14} /> Call Store
               </a>
-              <a href={`https://wa.me/${storeConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" style={{ flex: 1, padding: '0.75rem', fontSize: '0.8rem' }}>
+              <a href={`https://wa.me/${storeConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" style={{ flex: 1, padding: '0.6rem', fontSize: '0.75rem', justifyContent: 'center' }}>
                 <MessageCircle size={14} /> WhatsApp
               </a>
             </div>

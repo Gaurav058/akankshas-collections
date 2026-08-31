@@ -173,7 +173,7 @@ export const Home: React.FC<HomeProps> = ({ onSelectProduct }) => {
             {productCategories.map((cat, idx) => (
               <Link
                 key={cat.id}
-                to={`/collections?cat=${cat.id}`}
+                to={`/${cat.id}`}
                 className="glass-card img-hover-zoom"
                 style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '220px' }}
               >
@@ -256,7 +256,7 @@ export const Home: React.FC<HomeProps> = ({ onSelectProduct }) => {
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Vibrant silk suits, traditional pleated salwars, embroidered necklines, and statement dupattas celebrating regional flair.
               </p>
-              <Link to="/regional/punjabi" className="btn-outline-gold" style={{ width: '100%' }}>
+              <Link to="/punjabi-wear" className="btn-outline-gold" style={{ width: '100%' }}>
                 Explore Punjabi Edit
               </Link>
             </div>
@@ -268,7 +268,7 @@ export const Home: React.FC<HomeProps> = ({ onSelectProduct }) => {
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Gota patti detailing, bandhani patterns, vibrant jewel palettes, and regal Kundan accessories for festive occasions.
               </p>
-              <Link to="/regional/rajasthani" className="btn-outline-gold" style={{ width: '100%' }}>
+              <Link to="/rajasthani-wear" className="btn-outline-gold" style={{ width: '100%' }}>
                 Explore Rajasthani Edit
               </Link>
             </div>
@@ -280,7 +280,7 @@ export const Home: React.FC<HomeProps> = ({ onSelectProduct }) => {
               <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 Woven motif jacket suits, warm wool blend coats, and graceful textures honoring Himachali heritage.
               </p>
-              <Link to="/regional/himachali" className="btn-outline-gold" style={{ width: '100%' }}>
+              <Link to="/himachali-wear" className="btn-outline-gold" style={{ width: '100%' }}>
                 Explore Himachali Edit
               </Link>
             </div>
@@ -313,7 +313,7 @@ export const Home: React.FC<HomeProps> = ({ onSelectProduct }) => {
                 <li>✨ Velvet Bangles & Metallic Kada Stacks</li>
                 <li>✨ Bridal Jewellery Consultation at Store</li>
               </ul>
-              <Link to="/collections?cat=jewellery" className="btn-gold">
+              <Link to="/jewellery" className="btn-gold">
                 Explore Jewellery Section <ArrowRight size={16} />
               </Link>
             </div>

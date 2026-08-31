@@ -11,6 +11,14 @@ interface ProductModalProps {
 export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
   const [selectedImg, setSelectedImg] = useState(0);
 
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   if (!product) return null;
 
   const enquiryMessage = `Hello Akanksha's Collections, I am interested in knowing more about "${product.name}" (${product.categoryLabel}, ${product.style}). Could you confirm availability at your Satya Complex, Hamirpur store?`;
